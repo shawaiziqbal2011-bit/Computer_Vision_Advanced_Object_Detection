@@ -4,13 +4,13 @@ import cvzone
 from sort import *
 import numpy as np
 
-cap = cv2.VideoCapture("cam_survelance.mp4")
+cap = cv2.VideoCapture("cam_survelance2.mp4")
 model = YOLO("yolov8n.pt")
 
-mask = cv2.imread("mask_cam_survelance.png", cv2.IMREAD_GRAYSCALE)
+mask = cv2.imread("mask_cam_survelance2.png", cv2.IMREAD_GRAYSCALE)
 tracker = Sort(max_age=20, min_hits=3, iou_threshold=0.3)
 # x1,y1,x2,y2
-limits = [200, 250, 630, 250]
+limits = [320, 250, 630, 250]
 totalCount =[]
 
 while True:
